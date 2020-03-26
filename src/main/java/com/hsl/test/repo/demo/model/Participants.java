@@ -7,19 +7,25 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-//@Table(name = "Participant")
+//@Table(name = "ParticipantRepository")
 //@EntityListeners(AuditingEntityListener.class)
 public class Participants implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true)
-    private int id;
+    private int p_id;
 
     @NotNull
-    private String name;
+    private String p_name;
 
     @NotNull
     private int age;
+
+    @NotNull
+    private String events;
+
+    @NotNull
+    private String gender;
 
 }
