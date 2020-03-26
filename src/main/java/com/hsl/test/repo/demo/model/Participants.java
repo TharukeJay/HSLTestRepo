@@ -8,8 +8,8 @@ import java.io.Serializable;
 
 @Entity
 //@Table(name = "Participant")
-@EntityListeners(AuditingEntityListener.class)
-public class participants implements Serializable {
+//@EntityListeners(AuditingEntityListener.class)
+public class Participants implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
