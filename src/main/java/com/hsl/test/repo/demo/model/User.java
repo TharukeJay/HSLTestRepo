@@ -1,16 +1,24 @@
 package com.hsl.test.repo.demo.model;
 
 import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
+@Getter
+@Setter
 @Entity
+@Table(name = "user")
+@Embeddable
 public class User implements Serializable {
 
     @Id
-    private int id;
+    private Long id;
 
     @NotNull
     private String fName;
@@ -22,7 +30,7 @@ public class User implements Serializable {
     private String gender;
 
     @NotNull
-    private int contact_No;
+    private String contact_No;
 
     @NotNull
     private String userName;

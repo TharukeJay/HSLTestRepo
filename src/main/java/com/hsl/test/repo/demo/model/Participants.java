@@ -1,20 +1,22 @@
 package com.hsl.test.repo.demo.model;
 
 import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Getter
+@Setter
 @Entity
-//@Table(name = "ParticipantRepository")
-//@EntityListeners(AuditingEntityListener.class)
+@Table(name = "Participant")
+@Embeddable
 public class Participants implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true)
-    private int p_id;
+    private Long p_id;
 
     @NotNull
     private String p_name;
